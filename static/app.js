@@ -1,5 +1,5 @@
 function init() {
-  d3.json("../data/samples.json").then(function (json_data) {
+  d3.json("data/samples.json").then(function (json_data) {
     let data = json_data;
     // Taking a first look of the complete data set.
     console.log("The complete data set:")
@@ -26,7 +26,7 @@ function init() {
 //Filtering the current test subject. Pulling the names and values of the bacteria found.
 //Create both the horizontal bar graph and bubble graph to display the information.
 function select_subject(subjectID) {
-  d3.json("../data/samples.json").then(function (json_data) {
+  d3.json("data/samples.json").then(function (json_data) {
     console.log("Collecting data on the specficic test subject:");
     let data = json_data;  
     
@@ -98,7 +98,7 @@ function select_subject(subjectID) {
 }
 
 function meta_table(subjectID) {
-  d3.json("../data/samples.json").then(function (json_data) {
+  d3.json("data/samples.json").then(function (json_data) {
     let data = json_data
 
     //This time we specifically just want only the meta data part of the test subjects.
